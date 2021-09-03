@@ -6,14 +6,21 @@
     <title>KG's Homepage</title>
     <style>
 
+
+    body {
+        background: #272727;
+        font-family: sans-serif;
+    }
+
+
     #container {
         grid-gap: 5px 5px;
-        width: 800px;
+        width: 700px;
         height: 100%;
-        background: #cccccc;
+        background: #272727;
         display: grid;
         grid-template-rows: .5fr 45px 0.25fr 0.25fr;
-        grid-template-columns: 0.3fr 1fr;
+        grid-template-columns: 150px 1fr;
         margin: auto;
     }
 
@@ -22,40 +29,43 @@
         grid-column: 1 / 3;
         grid-row: 1 / 2;
         display: flex;
+        background: #c4c4c4;
         }
 
 
-    header a {
-        flex: 1;
-        color: white;
-        font-weight: 100;
-        letter-spacing: 1.5px;
-        text-decoration: none;
-        background: rgba(0,0,0,0.2);
-        padding: 20px 5px;
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        transition: all 0.5s;
-    }
-
-    header a:hover {
-        background: rgba(0,0,0,0.3);
-        text-decoration: none;
-    }
-
-
-    aside {
+ aside {
         grid-column: 1 / 2;
         grid-row: 3 / 4;
-        background: green;
+         display: flex;
+        width: 150px;
+        height: 100%;
+        background: #E4E4E4;
+        border: 1px solid #FBF6FE;
+        border-radius: 13px;
     }
 
+        .mainheader {
+        width: auto;
+        height: 20px;
+        background: linear-gradient(#A138E1 0%, #AF2DFF 100%);
+        /* box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.25);                 NOT WORKING!!!*/
+        border-radius: 13px 13px 0px 0px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 1px #000000;
+    }
 
     main {
         grid-row: 3 / 4;
         grid-column: 2 / 3;
-        background: pink;
+        height: 100%;
+        background: #E4E4E4;
+        border: 1px solid #FBF6FE;
+        border-radius: 13px;
+
     }
 
 
@@ -65,26 +75,84 @@
         background: yellow;
     }
 
+    .asideheader {
+        width: auto;
+        flex-direction: row;
+        height: 20px;
+        background: linear-gradient(#A138E1 0%, #AF2DFF 100%);
+        /* box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.25);                 NOT WORKING!!!*/
+        border-radius: 13px 13px 0px 0px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 12px;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 1px #000000;
+    }
+
+
+
+
+.navbody a {
+    background-color: #e4e4e4;
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.navbody a:hover {
+    background-color: #BDFF00;
+    border-radius: 13px;
+}
+
+.navbody a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+svg{display:block;}
+
     </style>
 </head>
 <body>
         <div id="container">
+
             <header>
+                Header
+            </header>
+
+
+            <aside>
+
+                <div class="asideheader">
+                    <svg width="315" height="17" viewBox="0 0 315 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.30902 7.5L0.809017 16.5H4.69099L9.19098 7.5H5.30902Z" fill="#BDFF00" stroke="#4A4A4A"/><path d="M11.309 7.5L6.80902 16.5H10.691L15.191 7.5H11.309Z" fill="#BDFF00" stroke="#4A4A4A"/></svg>
+                    navigation
+                </div>
+                <div class="navbody">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Content</a>
                 <a href="#">Blog</a>
                 <a href="#">Extra</a>
                 <a href="#">Link</a>
-            </header>
-            <aside>Aside</aside>
+                </div>
+            </aside>
+
+
             <main>
-                <h2>Main Content</h2>
-                <p>Hi, my name's Kegan and I'm an inexperienced frontend web developer who's dabbled in graphic design/animation and most things techonology. After years of different (dead-end) jobs, I've decided to get back in to the world of coding.</p>
-                <p>This website serves as my learning post and will soon expand with many more features. It may even include a blog, for the only person even interested in this site (me)! Who knows?</p>
-                <p>Other things that interest me are gaming, welding, electrical work (especially when pretty LED's are involved), outside adventures like camping, hiking and water sports.</p>
+                <div class="mainheader"><svg width="315" height="17" viewBox="0 0 315 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.30902 7.5L0.809017 16.5H4.69099L9.19098 7.5H5.30902Z" fill="#BDFF00" stroke="#4A4A4A"/><path d="M11.309 7.5L6.80902 16.5H10.691L15.191 7.5H11.309Z" fill="#BDFF00" stroke="#4A4A4A"/></svg>
+Main Content</div>
+                <p>Hi, my name's Kegan and I'm an inexperienced frontend web developer who's dabbled in graphic design/animation and most things techonology. After years of different jobs, I've decided to get back in to the world of coding.</p>
+                <p>This website serves as my learning post and will soon expand with many more features. It may even include a blog; who knows?</p>
+                <p>Other things that interest me are gaming, creating in-game maps, welding, electrical work (especially when pretty LED's are involved), outside adventures like camping, hiking and water sports.</p>
             </main>
+
+
             <footer>Footer</footer>
+
         </div>
 </body>
 </html>
